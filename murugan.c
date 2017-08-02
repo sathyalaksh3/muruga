@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-int rem,rev,temp,n;
-clrscr();
+int rev=0,temp,n;
 scanf("%d",&n);
-temp=n;rev=0;
+temp=n;
 while(temp!=0)
 {
-rem=temp%10;
-rev=rev*10+rem;
+rev=rev*10;
+rev=rev+temp%10;
 temp=temp/10;
 }
-if(temp==n)
+if(rev==n)
 printf("is palindrome\n");
 else
 printf("not palindrome\n");
